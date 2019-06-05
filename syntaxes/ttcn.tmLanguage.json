@@ -50,7 +50,7 @@
                 {
                     "comment": "structural keywords",
                     "name": "support.function.module.ttcn",
-                    "match": "(?x) \\b(type|module|var|timer|signature|template|function|altstep|testcase)\\b"
+                    "match": "(?x) \\b(type|module|var|timer|signature|template|function|altstep|testcase|record|union|port|component|enumerated|const)\\b"
                 },
                 {
                     "comment": "constant keywords",
@@ -72,7 +72,7 @@
                 },
                 {
                     "name": "keyword.other.ttcn",
-                    "match": "(?x) \\b(char|class|component|configuration|conjunct|cont|continue|control)\\b"
+                    "match": "(?x) \\b(char|class|configuration|conjunct|continue|control)\\b"
                 },
                 {
                     "name": "keyword.other.ttcn",
@@ -80,7 +80,7 @@
                 },
                 {
                     "name": "keyword.other.ttcn",
-                    "match": "(?x) \\b(encode|enumerated|except|extends|extension|external)\\b"
+                    "match": "(?x) \\b(encode|except|extends|extension|external)\\b"
                 },
                 {
                     "name": "keyword.other.ttcn",
@@ -116,11 +116,11 @@
                 },
                 {
                     "name": "keyword.other.ttcn",
-                    "match": "(?x) \\b(par|port|present|prev|private|procedure|public)\\b"
+                    "match": "(?x) \\b(par|present|prev|private|procedure|public)\\b"
                 },
                 {
                     "name": "keyword.other.ttcn",
-                    "match": "(?x) \\b(realtime|record|recursive|repeat|return|runs)\\b"
+                    "match": "(?x) \\b(realtime|recursive|repeat|return|runs)\\b"
                 },
                 {
                     "name": "keyword.other.ttcn",
@@ -224,7 +224,7 @@
                 },
                 {
                     "name": "entity.name.method.ttcn",
-                    "match": "(?x) \\b(unichar2int|unichar2oct|union)\\b"
+                    "match": "(?x) \\b(unichar2int|unichar2oct)\\b"
                 },
                 {
                     "name": "entity.name.method.ttcn",

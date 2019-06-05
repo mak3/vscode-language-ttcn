@@ -57,6 +57,7 @@ testcase testcase1() runs on sSystem
     var hexstring l_hexstring := 'FF'H;
     var octetstring l_octetstring := '00'O;
     var anytype l_any := { integer := -1 };
+    const integer l_const := 1;
 
     //user defined types
     var Request l_req := { 1, 1 };
