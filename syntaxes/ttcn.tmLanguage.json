@@ -244,6 +244,21 @@
                     "match": "(?x) \\b(boolean|charstring|bitstring|hexstring|octetstring|integer|float|anytype)\\b"
                 },
                 {
+                    "comment": "type identifier in variables",
+                    "name": "entity.name.type.ttcn",
+                    "match": "(?<=const|template|timer|var|record|enumerated|union|component)(?![[:space:]]template|[[:space:]]record|[[:space:]]enumerated|[[:space:]]union|[[:space:]]component)\\s+((?!@)[[:alpha:]][[:word:]]*)\\s*(?=[[:space:]\\[\\:\\;])"
+                },
+                {
+                    "comment": "type identifier for struct members and parameters in function definition",
+                    "name": "entity.name.type.ttcn",
+                    "match": "(\\w+)\\s(?=\\w+\\s*,|\\w+\\s*\\)|\\w+\\s*optional|\\w+\n)(?!optional)"
+                },
+                {
+                    "comment": "type identifier in function return",
+                    "name": "entity.name.type.ttcn",
+                    "match": "(?<=return)\\s+([a-zA-Z0-9_]+\\b)(?!;$)"
+                },
+                {
                     "comment": "function/testcase/altstep identifier",
                     "name": "entity.name.method.function.ttcn",
                     "match": "(?<=^function|^testcase|^altstep)\\s+((?!interleave)[[:alpha:]][[:word:]]*)(?=[[:space:]\\(\\)\\{\\}\\;])"

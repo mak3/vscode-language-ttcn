@@ -8,13 +8,16 @@ type integer myNewType (0..50)
 type record Request
 {
     myNewType param1,
-    charstring param2
+    charstring param2,
+    myNewType param3 optional,
+    myNewType param4 optional
 }
 
 // Declare Answer struct type with one field
 type record Answer
 {
-    myNewType param1
+    myNewType param1,
+    myNewType param2
 }
 
 // Declare a message based communication port
@@ -35,6 +38,13 @@ type component sSystem
 template Request Good_Req := {param1 := 42, param2 := "hello !" };
 template Answer All_is_OK := {param1 := 0};
 
+function exampleFunc(Answer p_param1, template Answer p_param2, inout template Answer p_param3)
+    runs on sSystem
+    return Answer
+{
+    return p_param;
+}
+
 // Define testcase1 that will run on sSystem component
 testcase testcase1() runs on sSystem
 {
@@ -47,6 +57,11 @@ testcase testcase1() runs on sSystem
     var hexstring l_hexstring := 'FF'H;
     var octetstring l_octetstring := '00'O;
     var anytype l_any := { integer := -1 };
+
+    //user defined types
+    var Request l_req := { 1, 1 };
+    var template Request l_req2 := { 1, 2 };
+    template Request l_req3 := { 1, 2 };
 
     // Send Request message with (42, "hello !") as parmeters
     cEnv.send(Good_Req);
