@@ -38,6 +38,16 @@ template Answer All_is_OK := {param1 := 0};
 // Define testcase1 that will run on sSystem component
 testcase testcase1() runs on sSystem
 {
+    //builtin types
+    var integer l_integer := 1;
+    var float l_float := 1.0;
+    var boolean l_boolean := true;
+    var charstring l_charstring := "Lorem Ipsum"
+    var bitstring l_bitstring := '01'B;
+    var hexstring l_hexstring := 'FF'H;
+    var octetstring l_octetstring := '00'O;
+    var anytype l_any := { integer := -1 };
+
     // Send Request message with (42, "hello !") as parmeters
     cEnv.send(Good_Req);
     // An alternative for the 2 possible answers
