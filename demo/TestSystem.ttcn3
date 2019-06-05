@@ -63,6 +63,22 @@ testcase testcase1() runs on sSystem
     var Request l_req := { 1, 1 };
     var template Request l_req2 := { 1, 2 };
     template Request l_req3 := { 1, 2 };
+    var template Request l_req2 := omit;
+
+    //loops
+    if (l_integer == 2)
+    {
+        continue;
+    }
+    else
+    {
+        log("true");
+    }
+
+    while (true)
+    {
+        break;
+    }
 
     // Send Request message with (42, "hello !") as parmeters
     cEnv.send(Good_Req);

@@ -48,6 +48,10 @@
         "keywords": {
             "patterns": [
                 {
+                    "name": "keyword.control.ttcn",
+                    "match": "(?x) \\b(if|else|while|for|return|continue|break|modifies|runs|on)\\b"
+                },
+                {
                     "comment": "structural keywords",
                     "name": "support.function.module.ttcn",
                     "match": "(?x) \\b(type|module|var|timer|signature|template|function|altstep|testcase|record|union|port|component|enumerated|const)\\b"
@@ -68,11 +72,7 @@
                 },
                 {
                     "name": "keyword.other.ttcn",
-                    "match": "(?x) \\b(break)\\b"
-                },
-                {
-                    "name": "keyword.other.ttcn",
-                    "match": "(?x) \\b(char|class|configuration|conjunct|continue|control)\\b"
+                    "match": "(?x) \\b(char|class|configuration|conjunct|control)\\b"
                 },
                 {
                     "name": "keyword.other.ttcn",
@@ -104,7 +104,7 @@
                 },
                 {
                     "name": "keyword.other.ttcn",
-                    "match": "(?x) \\b(message|mixed|mode|modifies|modulepar|mtc)\\b"
+                    "match": "(?x) \\b(message|mixed|mode|modulepar|mtc)\\b"
                 },
                 {
                     "name": "keyword.other.ttcn",
@@ -112,7 +112,7 @@
                 },
                 {
                     "name": "keyword.other.ttcn",
-                    "match": "(?x) \\b(object|of|omit|on|onentry|onexit|optional|out|override)\\b"
+                    "match": "(?x) \\b(object|of|onentry|onexit|optional|out|override)\\b"
                 },
                 {
                     "name": "keyword.other.ttcn",
@@ -120,7 +120,7 @@
                 },
                 {
                     "name": "keyword.other.ttcn",
-                    "match": "(?x) \\b(realtime|recursive|repeat|return|runs)\\b"
+                    "match": "(?x) \\b(realtime|recursive|repeat)\\b"
                 },
                 {
                     "name": "keyword.other.ttcn",
@@ -172,11 +172,11 @@
                 },
                 {
                     "name": "entity.name.method.ttcn",
-                    "match": "(?x) \\b(else|encvalue|encvalue_o|encvalue_unichar|enum2int|exception|execute)\\b"
+                    "match": "(?x) \\b(encvalue|encvalue_o|encvalue_unichar|enum2int|exception|execute)\\b"
                 },
                 {
                     "name": "entity.name.method.ttcn",
-                    "match": "(?x) \\b(float2int|for)\\b"
+                    "match": "(?x) \\b(float2int)\\b"
                 },
                 {
                     "name": "entity.name.method.ttcn",
@@ -188,7 +188,7 @@
                 },
                 {
                     "name": "entity.name.method.ttcn",
-                    "match": "(?x) \\b(if|int2bit|int2char|int2enum|int2float|int2hex|int2oct|int2str|int2unichar|isbound|ischosen|ispresent|istemplatekind|isvalue)\\b"
+                    "match": "(?x) \\b(int2bit|int2char|int2enum|int2float|int2hex|int2oct|int2str|int2unichar|isbound|ischosen|ispresent|istemplatekind|isvalue)\\b"
                 },
                 {
                     "name": "entity.name.method.ttcn",
@@ -229,10 +229,6 @@
                 {
                     "name": "entity.name.method.ttcn",
                     "match": "(?x) \\b(valueof)\\b"
-                },
-                {
-                    "name": "entity.name.method.ttcn",
-                    "match": "(?x) \\b(while)\\b"
                 }
             ]
         },
@@ -404,7 +400,7 @@
                 },
                 {
                     "comment": "statement separator symbol [.;,]",
-                    "name": "string.unquoted.separator.ttcn",
+                    "name": "punctuation.terminator.statement.ttcn",
                     "match": "([\\.\\:\\;\\,])(?![\\.\\:\\;\\,])"
                 },
                 {
@@ -461,6 +457,11 @@
                     "comment": "alt operators ([])",
                     "name": "keyword.operator.alt.ttcn",
                     "match": "^\\s*(\\[\\])"
+                },
+                {
+                    "comment": "omit",
+                    "name": "constant.language.null.ttcn",
+                    "match": "(?x) \\b(omit)\\b"
                 }
             ]
         },
