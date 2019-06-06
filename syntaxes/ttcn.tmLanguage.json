@@ -52,9 +52,13 @@
                     "match": "(?x) \\b(if|else|while|for|return|continue|break|modifies|runs|on)\\b"
                 },
                 {
+                    "name": "storage.type.function.ttcn",
+                    "match": "(?x) \\b(function|testcase|altstep|alt|module)\\b"
+                },
+                {
                     "comment": "structural keywords",
                     "name": "support.function.module.ttcn",
-                    "match": "(?x) \\b(type|module|var|timer|signature|template|function|altstep|testcase|record|union|port|component|enumerated|const)\\b"
+                    "match": "(?x) \\b(type|var|timer|signature|template|record|union|port|component|enumerated|const)\\b"
                 },
                 {
                     "comment": "constant keywords",
@@ -68,7 +72,7 @@
                 },
                 {
                     "name": "keyword.other.ttcn",
-                    "match": "(?x) \\b(address|alt|any|apply|assert|at)\\b"
+                    "match": "(?x) \\b(address|any|apply|assert|at)\\b"
                 },
                 {
                     "name": "keyword.other.ttcn",
@@ -154,6 +158,11 @@
         },
         "functions": {
             "patterns": [
+                {
+                    "comment": "function name",
+                    "name": "entity.name.function.ttcn",
+                    "match": "(\\w+)(?=\\(|\\<)"
+                },
                 {
                     "name": "entity.name.method.ttcn",
                     "match": "(?x) \\b(action|activate|alive|any2unistr)\\b"
@@ -256,7 +265,7 @@
                 },
                 {
                     "comment": "function/testcase/altstep identifier",
-                    "name": "entity.name.method.function.ttcn",
+                    "name": "entity.name.function.ttcn",
                     "match": "(?<=^function|^testcase|^altstep)\\s+((?!interleave)[[:alpha:]][[:word:]]*)(?=[[:space:]\\(\\)\\{\\}\\;])"
                 },
                 {
@@ -278,7 +287,7 @@
                 },
                 {
                     "comment": "function/testcase/altstep identifier",
-                    "name": "entity.name.method.function.ttcn",
+                    "name": "entity.name.function.ttcn",
                     "match": "(?<=[[:^word:]]function|[[:^word:]]testcase|[[:^word:]]altstep)\\s+((?!interleave)[[:alpha:]][[:word:]]*)(?=[[:space:]\\(\\)\\{\\}\\;])"
                 },
                 {
